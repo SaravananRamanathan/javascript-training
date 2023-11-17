@@ -27,6 +27,14 @@
     </div>
     <div class="overlay hidden"></div>
 
+    <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+    <script>
+      eruda.init();
+      if (!navigator.userAgent.match("Android")) {
+        eruda.show();
+      }
+    </script>
+
     <script src="script.js"></script>
   </body>
 </html>
