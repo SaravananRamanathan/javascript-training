@@ -59,9 +59,25 @@ const restaurant = {
   }
 };
 
+console.log(restaurant.openingHours?.mon?.open);
 
-console.log(restaurant);
+const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
+for (const day of days) {
+  open = restaurant.openingHours[day]?.open ?? 'N/A';
+  console.log(`On ${day}, we open at ${open}`);
+}
 
+// Methods
+console.log(restaurant.order?.(0,1) ?? 'Method does not exists')
+console.log(restaurant.orderRisotto?.(0,1) ?? 'Method does not exists')
+
+
+// Arrays
+const users = [
+  {name: 'srvnn', email: 'asdf@example.com'},
+  {name: 'name2', email: 'name2@example.com'},
+]
+console.log(users[0]?.name ?? `User not found.`);
 
 // const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 // for (const [index, item] of menu.entries()) {
