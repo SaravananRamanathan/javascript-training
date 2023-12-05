@@ -53,28 +53,31 @@ const restaurant = {
   }
 };
 
-// SPREAD, because on right side of =
-const arr = [1, 2, ...[3,4]];
-console.log(arr);
-
-// REST, because on left side of =
-const [a, b, ...others] = [1, 2, 3, 4, 5,];
-console.log(a, b, others);
-
-// Functions with REST
-const add = function(...arr) {
-  let sum = 0;
-  arr.forEach(x => {
-    sum += x
-  })
-  return sum
-}
-console.log(add(1,2,3));
-const nums = [20,30,50];
-console.log(add(...nums))
 
 
-restaurant.orderPizza('tomato', 'capcicum', 'sweet corn')
+
+// // SPREAD, because on right side of =
+// const arr = [1, 2, ...[3,4]];
+// console.log(arr);
+
+// // REST, because on left side of =
+// const [a, b, ...others] = [1, 2, 3, 4, 5,];
+// console.log(a, b, others);
+
+// // Functions with REST
+// const add = function(...arr) {
+//   let sum = 0;
+//   arr.forEach(x => {
+//     sum += x
+//   })
+//   return sum
+// }
+// console.log(add(1,2,3));
+// const nums = [20,30,50];
+// console.log(add(...nums))
+
+
+// restaurant.orderPizza('tomato', 'capcicum', 'sweet corn')
 
 
 // const arr = [7, 8, 9];
