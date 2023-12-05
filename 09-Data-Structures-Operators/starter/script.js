@@ -42,17 +42,21 @@ const restaurant = {
   },
 };
 
-restaurant.orderDelivery({
-  time: '22:30',
-  address: 'via del sole, 21',
-  mainIndex: 2,
-  starterIndex: 2,
-});
 
-restaurant.orderDelivery({
-  address: `Via del sole, 21`,
-  starterIndex: 1,
-});
+
+
+
+// restaurant.orderDelivery({
+//   time: '22:30',
+//   address: 'via del sole, 21',
+//   mainIndex: 2,
+//   starterIndex: 2,
+// });
+
+// restaurant.orderDelivery({
+//   address: `Via del sole, 21`,
+//   starterIndex: 1,
+// });
 
 // // destructuring objects
 // console.log(':testing');
