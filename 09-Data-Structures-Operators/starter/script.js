@@ -48,37 +48,37 @@ const restaurant = {
   },
 };
 
-const arr = [7, 8, 9];
-console.log(arr);
+// const arr = [7, 8, 9];
+// console.log(arr);
 
-const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
-console.log(badNewArr);
+// const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+// console.log(badNewArr);
 
-const newArr = [1, 2, ...arr];
-console.log(newArr);
-console.log(...arr);
+// const newArr = [1, 2, ...arr];
+// console.log(newArr);
+// console.log(...arr);
 
-const newMenu = [...restaurant.mainMenu, 'Gnocci'];
-console.log(newMenu);
+// const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+// console.log(newMenu);
 
-// Copy array
-const mainMenuCopy = [...restaurant.mainMenu]; // shallow copy
+// // Copy array
+// const mainMenuCopy = [...restaurant.mainMenu]; // shallow copy
 
-// join 2 arrays
-const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
-console.log(menu);
+// // join 2 arrays
+// const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
+// console.log(menu);
 
-const ingredients = [
-  'a',
-  'b',
-  'c',
-];
-console.log(ingredients);
-restaurant.orderPasta(...ingredients)
+// const ingredients = [
+//   'a',
+//   'b',
+//   'c',
+// ];
+// console.log(ingredients);
+// restaurant.orderPasta(...ingredients)
 
-// Objects
-const newRestaurant = {foundedIn: 1998, ...restaurant, founder: `lala land`}
-console.log(newRestaurant);
+// // Objects
+// const newRestaurant = {foundedIn: 1998, ...restaurant, founder: `lala land`}
+// console.log(newRestaurant);
 
 
 // restaurant.orderDelivery({
