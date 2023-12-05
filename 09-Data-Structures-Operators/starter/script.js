@@ -54,6 +54,12 @@ const restaurant = {
 };
 
 
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+for (const [index, item] of menu.entries()) {
+  console.log(`${index+1}: ${item}`);
+}
+
+console.log([...menu.entries()])
 
 const game = {
   team1: 'Bayern Munich',
@@ -122,22 +128,22 @@ TEST DATA FOR 6: Use players 'Davies', 'Muller', 'Lewandowski' and 'Kimmich'. Th
 GOOD LUCK 😀
 */
 
-console.log("Coding Challenge #1")
-//1.
-const [players1, players2] = game.players
-//2.
-const [gk, ...fieldPlayers] = players1
-//3.
-const allPlayers = [...players1, ...players2]
-//4.
-const players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic']
-//5.
-const {odds: {team1, team2, x: draw}} = game
-//6.
-game.printGoals(...game.scored);
-//7.
-team1<team2 && console.log('team1 likely to win');
-team2<team1 && console.log('team2 likely to win');
+// console.log("Coding Challenge #1")
+// //1.
+// const [players1, players2] = game.players
+// //2.
+// const [gk, ...fieldPlayers] = players1
+// //3.
+// const allPlayers = [...players1, ...players2]
+// //4.
+// const players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic']
+// //5.
+// const {odds: {team1, team2, x: draw}} = game
+// //6.
+// game.printGoals(...game.scored);
+// //7.
+// team1<team2 && console.log('team1 likely to win');
+// team2<team1 && console.log('team2 likely to win');
 
 // const rest1 = {
 //   name: 'Capri',
