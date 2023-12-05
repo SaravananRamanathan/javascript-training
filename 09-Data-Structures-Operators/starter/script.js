@@ -15,6 +15,21 @@ const restaurant = {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
 
+  openingHours: {
+    thu: {
+      open: 12,
+      close: 22,
+    },
+    fri: {
+      open: 11,
+      close: 23,
+    },
+    sat: {
+      open: 0, // Open 24 hours
+      close: 24,
+    },
+  },
+
   orderDelivery: function ({
     starterIndex = 1,
     mainIndex: j = 0,
@@ -32,21 +47,35 @@ const restaurant = {
     );
   },
 
-  openingHours: {
-    thu: {
-      open: 12,
-      close: 22,
-    },
-    fri: {
-      open: 11,
-      close: 23,
-    },
-    sat: {
-      open: 0, // Open 24 hours
-      close: 24,
-    },
-  },
+  orderPizza: function(mainIngredient, ...otherIngredients) {
+    console.log(mainIngredient);
+    console.log(otherIngredients);
+  }
 };
+
+// SPREAD, because on right side of =
+const arr = [1, 2, ...[3,4]];
+console.log(arr);
+
+// REST, because on left side of =
+const [a, b, ...others] = [1, 2, 3, 4, 5,];
+console.log(a, b, others);
+
+// Functions with REST
+const add = function(...arr) {
+  let sum = 0;
+  arr.forEach(x => {
+    sum += x
+  })
+  return sum
+}
+console.log(add(1,2,3));
+const nums = [20,30,50];
+console.log(add(...nums))
+
+
+restaurant.orderPizza('tomato', 'capcicum', 'sweet corn')
+
 
 // const arr = [7, 8, 9];
 // console.log(arr);
