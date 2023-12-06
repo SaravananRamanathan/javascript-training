@@ -4,7 +4,7 @@
 const flights =
   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
 
-const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
+const weekdays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
 
 const openingHours = {
   [weekdays[3]]: {
@@ -19,7 +19,7 @@ const openingHours = {
     open: 0, // Open 24 hours
     close: 24,
   },
-}
+};
 
 // Data needed for first part of the section
 const restaurant = {
@@ -56,9 +56,34 @@ const restaurant = {
   orderPizza(mainIngredient, ...otherIngredients) {
     console.log(mainIngredient);
     console.log(otherIngredients);
-  }
+  },
 };
 
+// sets
+const ordersSet = new Set([
+  'pasta',
+  'pizza',
+  'pizza',
+  'Risotto',
+  'pasta',
+  'pizza',
+]);
+console.log(ordersSet);
+
+console.log(new Set('srvnn'));
+
+console.log(ordersSet.size);
+console.log(ordersSet.has('pizza'));
+console.log(ordersSet.has('bread'));
+ordersSet.add('Garlic Bread')
+ordersSet.add('Garlic Bread')
+ordersSet.delete('Risotto')
+// ordersSet.clear();
+console.log(ordersSet);
+
+for (const order of ordersSet) {
+  console.log(order);
+}
 
 ///////////////////////////////////////
 // Coding Challenge #2
@@ -83,56 +108,56 @@ BONUS: Create an object called 'scorers' which contains the names of the players
 
 GOOD LUCK 😀
 */
-const game = {
-  team1: 'Bayern Munich',
-  team2: 'Borrussia Dortmund',
-  players: [
-    [
-      'Neuer',
-      'Pavard',
-      'Martinez',
-      'Alaba',
-      'Davies',
-      'Kimmich',
-      'Goretzka',
-      'Coman',
-      'Muller',
-      'Gnarby',
-      'Lewandowski',
-    ],
-    [
-      'Burki',
-      'Schulz',
-      'Hummels',
-      'Akanji',
-      'Hakimi',
-      'Weigl',
-      'Witsel',
-      'Hazard',
-      'Brandt',
-      'Sancho',
-      'Gotze',
-    ],
-  ],
-  score: '4:0',
-  scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
-  date: 'Nov 9th, 2037',
-  odds: {
-    team1: 1.33,
-    x: 3.25,
-    team2: 6.5,
-  },
-};
-// 1.
-for (const [index, player] of game.scored.entries()) console.log(`Goal ${index+1}: ${player}`);
-// 2.
-let sum=0;
-Object.values(game.odds).forEach((value, index, array) => {sum += value; index==array.length-1 && console.log(sum/array.length)});
-// 3.
-Object.entries(game.odds).forEach(([key, value]) => console.log(`Odds of ${game[key] ? `Victory to ${game[key]}` : 'draw'}: ${value}`));
-// Bonus
-const scorers = {}
-game.scored.forEach((player, index, array) => {scorers[player] ??= 0, scorers[player]++, index==array.length-1 && console.log(scorers)});
+// const game = {
+//   team1: 'Bayern Munich',
+//   team2: 'Borrussia Dortmund',
+//   players: [
+//     [
+//       'Neuer',
+//       'Pavard',
+//       'Martinez',
+//       'Alaba',
+//       'Davies',
+//       'Kimmich',
+//       'Goretzka',
+//       'Coman',
+//       'Muller',
+//       'Gnarby',
+//       'Lewandowski',
+//     ],
+//     [
+//       'Burki',
+//       'Schulz',
+//       'Hummels',
+//       'Akanji',
+//       'Hakimi',
+//       'Weigl',
+//       'Witsel',
+//       'Hazard',
+//       'Brandt',
+//       'Sancho',
+//       'Gotze',
+//     ],
+//   ],
+//   score: '4:0',
+//   scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+//   date: 'Nov 9th, 2037',
+//   odds: {
+//     team1: 1.33,
+//     x: 3.25,
+//     team2: 6.5,
+//   },
+// };
+// // 1.
+// for (const [index, player] of game.scored.entries()) console.log(`Goal ${index+1}: ${player}`);
+// // 2.
+// let sum=0;
+// Object.values(game.odds).forEach((value, index, array) => {sum += value; index==array.length-1 && console.log(sum/array.length)});
+// // 3.
+// Object.entries(game.odds).forEach(([key, value]) => console.log(`Odds of ${game[key] ? `Victory to ${game[key]}` : 'draw'}: ${value}`));
+// // Bonus
+// const scorers = {}
+// game.scored.forEach((player, index, array) => {scorers[player] ??= 0, scorers[player]++, index==array.length-1 && console.log(scorers)});
 
 // Property NAMES
 // const properties = Object.keys(openingHours)
@@ -162,7 +187,6 @@ game.scored.forEach((player, index, array) => {scorers[player] ??= 0, scorers[pl
 //   console.log(`${index+1}: On ${key} we open at ${open} and close at ${close}`);
 // }
 
-
 // console.log(restaurant.openingHours?.mon?.open);
 
 // const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
@@ -174,7 +198,6 @@ game.scored.forEach((player, index, array) => {scorers[player] ??= 0, scorers[pl
 // // Methods
 // console.log(restaurant.order?.(0,1) ?? 'Method does not exists')
 // console.log(restaurant.orderRisotto?.(0,1) ?? 'Method does not exists')
-
 
 // // Arrays
 // const users = [
@@ -302,7 +325,6 @@ GOOD LUCK 😀
 // const guestCorrect = restaurant.numGuests ?? 10;
 // console.log(guestCorrect);
 
-
 // // SPREAD, because on right side of =
 // const arr = [1, 2, ...[3,4]];
 // console.log(arr);
@@ -323,9 +345,7 @@ GOOD LUCK 😀
 // const nums = [20,30,50];
 // console.log(add(...nums))
 
-
 // restaurant.orderPizza('tomato', 'capcicum', 'sweet corn')
-
 
 // const arr = [7, 8, 9];
 // console.log(arr);
@@ -358,7 +378,6 @@ GOOD LUCK 😀
 // // Objects
 // const newRestaurant = {foundedIn: 1998, ...restaurant, founder: `lala land`}
 // console.log(newRestaurant);
-
 
 // restaurant.orderDelivery({
 //   time: '22:30',
