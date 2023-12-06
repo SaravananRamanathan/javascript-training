@@ -123,7 +123,16 @@ const game = {
     team2: 6.5,
   },
 };
-
+// 1.
+for (const [index, player] of game.scored.entries()) console.log(`Goal ${index+1}: ${player}`);
+// 2.
+let sum=0;
+Object.values(game.odds).forEach((value, index, array) => {sum += value; index==array.length-1 && console.log(sum/array.length)});
+// 3.
+Object.entries(game.odds).forEach(([key, value]) => console.log(`Odds of ${game[key] ? `Victory to ${game[key]}` : 'draw'}: ${value}`));
+// Bonus
+const scorers = {}
+game.scored.forEach((player, index, array) => {scorers[player] ??= 0, scorers[player]++, index==array.length-1 && console.log(scorers)});
 
 // Property NAMES
 // const properties = Object.keys(openingHours)
