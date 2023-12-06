@@ -59,6 +59,35 @@ const restaurant = {
   }
 };
 
+// Property NAMES
+const properties = Object.keys(openingHours)
+console.log(properties);
+let openStr = `We are open on ${properties.length} days: `;
+
+for (const [index, day] of properties.entries()) {
+  openStr += `${day}${index<properties.length-1 ? ',' : ''} `;
+}
+console.log(openStr);
+
+// Property VALUES
+const values = Object.values(openingHours);
+console.log(values);
+
+// Entire object
+const entries = Object.entries(openingHours);
+console.log(...entries.entries());
+
+// looping over entires object
+for (const [key, {open, close}] of entries) {
+  console.log(`On ${key} we open at ${open} and close at ${close}`);
+}
+
+console.log(`We are open on the following ${Object.keys(openingHours).length} days:`);
+for (const [index, [key, {open, close}]] of Object.entries(openingHours).entries()) {
+  console.log(`${index+1}: On ${key} we open at ${open} and close at ${close}`);
+}
+
+
 // console.log(restaurant.openingHours?.mon?.open);
 
 // const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
