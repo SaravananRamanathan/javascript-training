@@ -59,31 +59,31 @@ const restaurant = {
   },
 };
 
-// sets
-const ordersSet = new Set([
-  'pasta',
-  'pizza',
-  'pizza',
-  'Risotto',
-  'pasta',
-  'pizza',
-]);
-console.log(ordersSet);
+// // sets
+// const ordersSet = new Set([
+//   'pasta',
+//   'pizza',
+//   'pizza',
+//   'Risotto',
+//   'pasta',
+//   'pizza',
+// ]);
+// console.log(ordersSet);
 
-console.log(new Set('srvnn'));
+// console.log(new Set('srvnn'));
 
-console.log(ordersSet.size);
-console.log(ordersSet.has('pizza'));
-console.log(ordersSet.has('bread'));
-ordersSet.add('Garlic Bread')
-ordersSet.add('Garlic Bread')
-ordersSet.delete('Risotto')
-// ordersSet.clear();
-console.log(ordersSet);
+// console.log(ordersSet.size);
+// console.log(ordersSet.has('pizza'));
+// console.log(ordersSet.has('bread'));
+// ordersSet.add('Garlic Bread')
+// ordersSet.add('Garlic Bread')
+// ordersSet.delete('Risotto')
+// // ordersSet.clear();
+// console.log(ordersSet);
 
-for (const order of ordersSet) {
-  console.log(order);
-}
+// for (const order of ordersSet) {
+//   console.log(order);
+// }
 
 ///////////////////////////////////////
 // Coding Challenge #2
