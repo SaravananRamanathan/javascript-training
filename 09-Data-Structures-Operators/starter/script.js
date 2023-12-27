@@ -91,37 +91,37 @@ Afterwards, test with your own test data!
 GOOD LUCK 😀
 */
 
-document.body.append(document.createElement('textarea'));
-document.body.append(document.createElement('button'));
+// document.body.append(document.createElement('textarea'));
+// document.body.append(document.createElement('button'));
 
-/**
- * Returns the text in cammel case format.
- * @param {String} text
- */
-const getFormattedText = function (...texts) {
-  let formattedText = texts.shift().trim();
-  for (let text of texts) {
-    text = text.trim();
-    formattedText += text.toLowerCase().replace(/^./, text[0].toUpperCase());
-  }
-  return formattedText;
-};
+// /**
+//  * Returns the text in cammel case format.
+//  * @param {String} text
+//  */
+// const getFormattedText = function (...texts) {
+//   let formattedText = texts.shift().trim();
+//   for (let text of texts) {
+//     text = text.trim();
+//     formattedText += text.toLowerCase().replace(/^./, text[0].toUpperCase());
+//   }
+//   return formattedText;
+// };
 
-const buttonOnClick = function ({ bypassInputText = '' }) {
-  console.log('button clicked...');
-  const inputText = bypassInputText ? bypassInputText : document.querySelector('textarea').value;
-  let output = '';
-  const seperatedTexts = inputText.split('\n');
-  const maxTextLen = Math.max(...seperatedTexts.map(item => item.length));
-  for (const [index, text] of seperatedTexts.entries()) {
-    output += `${getFormattedText(...text.split('_'))
-      .padEnd(maxTextLen + 5)
-      .padEnd(maxTextLen + index + 6, '✅')}\n`;
-  }
-  document.querySelector('textarea').value = output;
-};
+// const buttonOnClick = function ({ bypassInputText = '' }) {
+//   console.log('button clicked...');
+//   const inputText = bypassInputText ? bypassInputText : document.querySelector('textarea').value;
+//   let output = '';
+//   const seperatedTexts = inputText.split('\n');
+//   const maxTextLen = Math.max(...seperatedTexts.map(item => item.length));
+//   for (const [index, text] of seperatedTexts.entries()) {
+//     output += `${getFormattedText(...text.split('_'))
+//       .padEnd(maxTextLen + 5)
+//       .padEnd(maxTextLen + index + 6, '✅')}\n`;
+//   }
+//   document.querySelector('textarea').value = output;
+// };
 
-document.querySelector('button').addEventListener('click', buttonOnClick);
+// document.querySelector('button').addEventListener('click', buttonOnClick);
 
 // buttonOnClick({
 //   bypassInputText: `underscore_case
