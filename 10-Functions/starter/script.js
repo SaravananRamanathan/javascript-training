@@ -191,4 +191,15 @@ GOOD LUCK 😀
 
 // poll.displayResults.call({ answers: [5, 2, 3] }, DISPLAY_TYPE_STRING);
 
+// const runOnce = function() {
+//   console.log('This will never run again.');
+// }
 
+// runOnce();
+// runOnce();
+
+// (function() {
+//   console.log('This will never run again.');
+// })();
+
+// (() => console.log('This will never run again.'))();
