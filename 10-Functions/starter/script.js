@@ -132,61 +132,63 @@ BONUS TEST DATA 2: [1, 5, 3, 9, 6, 1]
 GOOD LUCK 😀
 */
 
-const DISPLAY_TYPE_STRING = 'string';
-const DISPLAY_TYPE_ARRAY = 'array';
+// const DISPLAY_TYPE_STRING = 'string';
+// const DISPLAY_TYPE_ARRAY = 'array';
 
-const isValidPollChoice = function (choice) {
-  if (choice != NaN) {
-    const startRange = parseInt(this.options[0][0]);
-    const maxRange = this.options.length + startRange;
-    return choice >= startRange && choice < maxRange;
-  }
-  return false;
-};
+// const isValidPollChoice = function (choice) {
+//   if (choice != NaN) {
+//     const startRange = parseInt(this.options[0][0]);
+//     const maxRange = this.options.length + startRange;
+//     return choice >= startRange && choice < maxRange;
+//   }
+//   return false;
+// };
 
-const poll = {
-  question: 'What is your favourite programming language?',
-  options: ['0: JavaScript', '1: Python', '2: Rust', '3: C++'],
-  answers: new Array(4).fill(0),
-  registerNewAnswer() {
-    let promtMessage = `${this.question}\n`;
-    promtMessage += this.options.join('\n');
-    promtMessage += '\n(Write option number)';
-    const choice = parseInt(prompt(promtMessage));
+// const poll = {
+//   question: 'What is your favourite programming language?',
+//   options: ['0: JavaScript', '1: Python', '2: Rust', '3: C++'],
+//   answers: new Array(4).fill(0),
+//   registerNewAnswer() {
+//     let promtMessage = `${this.question}\n`;
+//     promtMessage += this.options.join('\n');
+//     promtMessage += '\n(Write option number)';
+//     const choice = parseInt(prompt(promtMessage));
 
-    if (isValidPollChoice.call(poll, choice)) {
-      this.answers[choice]++;
-    } else {
-      alert(`Invalid choice, please try again...`);
-    }
-    this.displayResults(DISPLAY_TYPE_STRING);
-  },
-  displayResults(type = DISPLAY_TYPE_ARRAY) {
-    if (type === DISPLAY_TYPE_STRING) {
-      console.log(`Poll results are ${this.answers}`);
-      return;
-    }
-    console.log(this.answers);
-  },
-};
+//     if (isValidPollChoice.call(poll, choice)) {
+//       this.answers[choice]++;
+//     } else {
+//       alert(`Invalid choice, please try again...`);
+//     }
+//     this.displayResults(DISPLAY_TYPE_STRING);
+//   },
+//   displayResults(type = DISPLAY_TYPE_ARRAY) {
+//     if (type === DISPLAY_TYPE_STRING) {
+//       console.log(`Poll results are ${this.answers}`);
+//       return;
+//     }
+//     console.log(this.answers);
+//   },
+// };
 
-document
-  .getElementsByClassName('poll')[0]
-  ?.addEventListener('click', poll.registerNewAnswer.bind(poll));
+// document
+//   .getElementsByClassName('poll')[0]
+//   ?.addEventListener('click', poll.registerNewAnswer.bind(poll));
 
-const testData = {
-  answers: [],
-  setAnswers(data) {
-    this.answers = data;
-  },
-};
+// const testData = {
+//   answers: [],
+//   setAnswers(data) {
+//     this.answers = data;
+//   },
+// };
 
-testData.setAnswers([5, 2, 3]);
-poll.displayResults.call(testData, DISPLAY_TYPE_ARRAY);
-poll.displayResults.call(testData, DISPLAY_TYPE_STRING);
+// testData.setAnswers([5, 2, 3]);
+// poll.displayResults.call(testData, DISPLAY_TYPE_ARRAY);
+// poll.displayResults.call(testData, DISPLAY_TYPE_STRING);
 
-testData.setAnswers([1, 5, 3, 9, 6, 1]);
-poll.displayResults.call(testData);
-poll.displayResults.call(testData);
+// testData.setAnswers([1, 5, 3, 9, 6, 1]);
+// poll.displayResults.call(testData);
+// poll.displayResults.call(testData);
 
-poll.displayResults.call({ answers: [5, 2, 3] }, DISPLAY_TYPE_STRING);
+// poll.displayResults.call({ answers: [5, 2, 3] }, DISPLAY_TYPE_STRING);
+
+
